@@ -48,7 +48,7 @@ h2{
 }
 /* first secetion code is here */
 .first-section{
-    background-image: url("/images/header-bg.png");
+    background-image: url("../images/header-bg.png");
     background-repeat: no-repeat;
 }
 .name-highlighter{
@@ -90,7 +90,7 @@ h2{
 /* second section code is here */
 /* have been reusing the same code from first section */
 .second-section{
-    background-image: url("/images/biography-bg.png");
+    background-image: url("../images/biography-bg.png");
     background-repeat: no-repeat;
 }
 .second-div{
@@ -98,7 +98,7 @@ h2{
 }
 /* third section */
 .third-section{
-    background-image: url("/images/latest-work-bg.png");
+    background-image: url("../images/latest-work-bg.png");
     background-repeat: no-repeat;
 }
 .third-section .mydiv h1{
@@ -128,7 +128,7 @@ h2{
 }
 /* fourth section */
 .fourth-section{
-    background-image: url("/images/latest-work-bg.png");
+    background-image: url("../images/footer-bg.png");
     background-repeat: no-repeat;
 }
 .fourth-section .final-secdiv{
