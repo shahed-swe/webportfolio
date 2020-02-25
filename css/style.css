@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Noto Sans', 'Noto Serif', sans-serif, Arial, Helvetica;
   margin: 0px;
@@ -8,7 +11,7 @@ h1 {
 }
 
 section {
-  height: 80vh;
+  height: 100vh;
   padding-top: 30px;
 }
 
@@ -18,11 +21,12 @@ h2 {
 }
 
 /* navbar */
-.fixed-nav{
-  margin:0;
+.fixed-nav {
+  margin: 0;
   width: 100%;
   position: fixed;
 }
+
 .navbar {
   padding-left: 7.8%;
   overflow: hidden;
@@ -171,7 +175,7 @@ h2 {
 }
 
 .third-section .latest-work img:hover {
-  border-left: 4px solid;
+  border-right: 4px solid;
   border-image: linear-gradient(180deg, blue, purple);
   box-shadow: 10px 10px 40px gray;
   border-image-slice: 1;
