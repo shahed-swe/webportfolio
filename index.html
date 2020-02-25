@@ -1,111 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Anton|Noto+Sans:400,700|Noto+Serif:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
-    <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type = "image/x-icon"> 
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Noto+Sans:400,700|Noto+Serif:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
+  <style>
+  </style>
 </head>
+
 <body>
-    <!-- navbar section -->
-    <nav class="navbar">
-        <div class="img">
-            <ul type="none">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+  <div class="fixed-nav">
+    <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <div class="dropdown">
+        <button class="dropbtn">Blog
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
         </div>
-        
-    </nav>
-    <!-- first section -->
-    <section class="first-section">
-        <div class="div-section another-div">
-            <h1>Hello I'm</h1>
-            <h1><span class="name-highlighter">Shahed Talukder</span></h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-            <a href="#">Hire Me</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Article
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
         </div>
-        <div class="div-section">
-            <img src="images/peter.png" alt="">
-        </div>
-    </section>
-
-    <!-- second section -->
-    <section class="second-section">
-        <div class="div-section second-div">
-            <img src="images/peter_dream.png" alt="">
-        </div>
-        <div class="div-section second-div">
-            <h2>Biography</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-            <a href="#">Download cV</a>
-        </div>
-    </section>
-
-    <!-- third section -->
-    <section class="third-section">
-        <div class="mydiv">
-            <h1>My Latest Work</h1>
-        </div>
-        <div class="latest-work">
-            <div class="all-project">
-                <img src="images/work-1.png" alt="">
-            </div>
-            <div class="all-project">
-                <img src="images/work-2.jpg" alt="">
-            </div>
-            <div class="all-project">
-                <img src="images/work-3.jpg" alt="">
-            </div>
-        </div>
-    </section>
-    <!-- section three -->
-    <section class="section-three">
-        <div class="text-align">
-            <h2 class="text-dec">Experience</h2>
-        </div>
-        <div class="section-area border-style">
-            <h2>Full Stack Web Developer</h2>
-            <h3 class="body-highlight">2019 - Present | Pro level Python Dev</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        </div>
-        <div class="section-area border-style">
-            <h2>Noob Developer</h2>
-            <h3 class="body-highlight">2018-2019 | Python Learner</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
-    </section>
-    <!-- final section -->
-    <section class="fourth-section">
-        <div class="final-secdiv take1">
-            <h1>What Client are say</h1>
-            <h5>Shahed Talukder</h5>
-            <h6>Founder & CEO Dev Talk</h6>
-        </div>
-        <div class="final-secdiv">
-            <p class="p-tag">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-            </p>
-        </div>   
-        <div class="final-secdiv take2">
-            <h5>Leave me a message in the</h5>
-            <h4><a href="">shahedtalukder51@gmail.com</a></h4>
-            <form>
-                <input type="text" id="fname" name="fname" placeholder="exp. john devid">
-                <input type="email" id="lname" name="lname" placeholder="example@email.com">
-                <input type="submit" value="Send">
-            </form> 
-        </div>
-    </section>
-    
-    <footer>
-        <p>&copy;Copyright by @ Shahed Talukder</p>
-    </footer>
+      </div>
+    </div>
+  </div>
+  <!-- first section -->
+  <section class="first-section">
+    <div class="div-section another-div">
+      <h1>Hello I'm</h1>
+      <h1><span class="name-highlighter">Shahed Talukder</span></h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. </p>
+      <a href="#">Hire Me</a>
+    </div>
+    <div class="div-section">
+      <img src="images/peter.png" alt="">
+    </div>
+  </section>
+  <!-- second section -->
+  <section class="second-section">
+    <div class="div-section second-div">
+      <img src="images/peter_dream.png" alt="">
+    </div>
+    <div class="div-section second-div">
+      <h2>Biography</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. </p>
+      <a href="#">Download cV</a>
+    </div>
+  </section>
+  <!-- third section -->
+  <section class="third-section">
+    <div class="mydiv">
+      <h1>My Latest Work</h1>
+    </div>
+    <div class="latest-work">
+      <div class="all-project">
+        <img src="images/work-1.png" alt="">
+      </div>
+      <div class="all-project">
+        <img src="images/work-2.jpg" alt="">
+      </div>
+      <div class="all-project">
+        <img src="images/work-3.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- section three -->
+  <section class="section-three">
+    <div class="text-align">
+      <h2 class="text-dec">Experience</h2>
+    </div>
+    <div class="section-area border-style">
+      <h2>Full Stack Web Developer</h2>
+      <h3 class="body-highlight">2019 - Present | Pro level Python Dev</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </div>
+    <div class="section-area border-style">
+      <h2>Noob Developer</h2>
+      <h3 class="body-highlight">2018-2019 | Python Learner</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+  </section>
+  <!-- final section -->
+  <section class="fourth-section">
+    <div class="final-secdiv take1">
+      <h1>What Client are say</h1>
+      <h5>Shahed Talukder</h5>
+      <h6>Founder & CEO Dev Talk</h6>
+    </div>
+    <div class="final-secdiv">
+      <p class="p-tag"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+    </div>
+    <div class="final-secdiv take2">
+      <h5>Leave me a message in the</h5>
+      <h4><a href="">shahedtalukder51@gmail.com</a></h4>
+      <form>
+        <input type="text" id="fname" name="fname" placeholder="exp. john devid">
+        <input type="email" id="lname" name="lname" placeholder="example@email.com">
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>&copy;Copyright by @ Shahed Talukder</p>
+  </footer>
 </body>
+
 </html>
