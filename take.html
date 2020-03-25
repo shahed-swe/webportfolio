@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <title>Hello, world!</title>
+    <style>
+        .body{
+            background-image: linear-gradient(90deg, #59df59, #6060b1);
+        }
+    </style>
+</head>
+
+<body class="body">
+    <h1 align="center">Login</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 m-auto">
+                <form action="">
+                    <div class="form-group mb-6">
+                        <input class="form-control" type="text" id="input1" placeholder="First Name">
+                    </div>
+                    <div class="form-group mb-6">
+                        <input class="form-control" type="text" id="input2" placeholder="Last Name">
+                    </div>
+                    <div class="form-group mb-6">
+                        <input class="form-control" type="email" id="input3" placeholder="Email">
+                    </div>
+                    <div class="form-group mb-6">
+                        <input class="form-control" type="password" id="input4" placeholder="Password">
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-info shadow-none btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#submit').attr("disabled", true);
+            $('#input2').attr("disabled", true);
+            $('#input3').attr("disabled", true);
+            $('#input4').attr("disabled", true);
+            $('#submit').css("display", "none");
+
+            $("#input1").on("input", function () {
+                var input1 = $("#input1").val()
+                if (input1) {
+                    $('#input2').attr("disabled", false);
+                }
+                else {
+                    $('#input2').attr("disabled", true);
+                    $('#input3').attr("disabled", true);
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+
+            $("#input2").on("input", function () {
+                var input2 = $("#input2").val();
+                if (input2) {
+                    $('#input3').attr("disabled", false);
+                }
+                else {
+                    $('#input3').attr("disabled", true);
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+
+            $("#input3").on("input", function () {
+                var input3 = $("#input3").val();
+                if (input3) {
+                    $('#input4').attr("disabled", false);
+                }
+                else {
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+
+            $("#input4").on("input", function () {
+                var input3 = $("#input4").val();
+                if (input3) {
+                    $('#submit').attr("disabled", false);
+                    $('#submit').css("display", "");
+                }
+                else {
+                    $('#submit').attr("disabled", true);
+                    $('#submit').css("display", "none");
+                }
+            });
+        })
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+
+</html>

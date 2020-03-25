@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8 m-auto">
+                <h1 style="text-align: center;">Hello World!</h1>
+                <form action="" name="myform">
+                    <div class="form-group mb-4">
+                        <input type="text" class="form-control" id="input1" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="text" class="form-control" id="input2" placeholder="Last Name">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control" id="input3" placeholder="Email">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="password" class="form-control" id="input4" placeholder="Password">
+                    </div>
+
+                    <input type="submit" id="submit" class="btn btn-info shadow-none btn-block" value="Send">
+                </form>
+            </div>
+
+            <div class="col-12 col-lg-8 m-auto" id="data-center">
+                <div class="card mt-4">
+                    <div class="card-body" id="data-field">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#submit').attr("disabled", true);
+            $('#input2').attr("disabled", true);
+            $('#input3').attr("disabled", true);
+            $('#input4').attr("disabled", true);
+            $('#submit').css("display", "none");
+            $('#data-center').css("display", "none");
+
+            $("#input1").on("input", function () {
+                var input1 = $('#input1').val();
+                if (input1) {
+                    $('#input2').attr("disabled", false);
+                } else {
+                    $('#input2').attr("disabled", true);
+                    $('#input3').attr("disabled", true);
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+            $("#input2").on("input", function () {
+                var input2 = $('#input2').val();
+                if (input2) {
+                    $('#input3').attr("disabled", false);
+                } else {
+                    $('#input3').attr("disabled", true);
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+            $("#input3").on("input", function () {
+                var input3 = $('#input3').val();
+                if (input3) {
+                    $('#input4').attr("disabled", false);
+                } else {
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+
+            $("#input4").on("input", function () {
+                var input4 = $('#input4').val();
+                if (input4) {
+                    $('#submit').attr("disabled", false);
+                    $('#submit').css("display", "");
+                } else {
+                    $('#submit').attr("disabled", true);
+                    $('#submit').css("display", "none"); 
+                }
+            });
+
+            // Form submit
+            $('#submit').click(function () {
+                event.preventDefault();
+                var data = {
+                    input1: $('#input1').val(),
+                    input2: $('#input2').val(),
+                    input3: $('#input3').val(),
+                    input4: $('#input4').val(),
+                }
+
+                if(data){
+                    console.log(data);
+                    $('#data-center').css("display", "block");
+                    $('#data-field').append("<p>First Input: " + data.input1 + "</p>");
+                    $('#data-field').append("<p>Second Input: " + data.input2 + "</p>");
+                    $('#data-field').append("<p>Third Input: " + data.input3 + "</p>");
+                    $('#data-field').append("<p>Fourth Input: " + data.input4 + "</p>");
+                }else{
+                    $('#data-center').css("display", "none");
+                }
+                
+            });
+        })
+    </script>
+</body>
+
+</html>

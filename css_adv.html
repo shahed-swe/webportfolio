@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <title>Document</title>
+    <style>
+        .first-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            margin-top: 10px;
+            height: 23px;
+            width: 400px;
+        }
+
+        input[type="submit"] {
+            background-color: aquamarine;
+            margin-top: 5px;
+            margin-left: 329px;
+            height: 31px;
+            width: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first-section">
+        <form>
+            <input type="text" id="input1"><br>
+            <input type="text" id="input2"><br>
+            <input type="email" id="input3"><br>
+            <input type="password" id="input4"><br>
+            <input type="submit" id="submit" value="send">
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#submit').attr("disabled", true);
+            $('#input2').attr("disabled",true);
+            $('#input3').attr("disabled",true);
+            $('#input4').attr("disabled",true);
+            $('#submit').css("display", "none");
+
+            $("#input1").on("input", function(){
+                var input1 = $("#input1").val()
+                if(input1){
+                    $('#input2').attr("disabled", false);
+                }
+                else{
+                    $('#input2').attr("disabled", true);
+                    $('#input3').attr("disabled", true);
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+
+            $("#input2").on("input", function(){
+                var input2 = $("#input2").val();
+                if(input2){
+                    $('#input3').attr("disabled", false);
+                }
+                else{
+                    $('#input3').attr("disabled", true);
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+
+            $("#input3").on("input", function(){
+                var input3 = $("#input3").val();
+                if(input3){
+                    $('#input4').attr("disabled", false);
+                }
+                else{
+                    $('#input4').attr("disabled", true);
+                    $('#submit').attr("disabled", true);
+                }
+            });
+            
+            $("#input4").on("input", function () {
+                var input3 = $("#input4").val();
+                if (input3) {
+                    $('#submit').attr("disabled", false);
+                    $('#submit').css("display", "");
+                }
+                else {
+                    $('#submit').attr("disabled", true);
+                    $('#submit').css("display", "none"); 
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

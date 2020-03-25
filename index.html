@@ -128,11 +128,25 @@
     <div class="final-secdiv take2">
       <h5>Leave me a message in the</h5>
       <h4><a href="">shahedtalukder51@gmail.com</a></h4>
-      <form>
+      <form name="myform" onsubmit="return validateForm()" method="POST">
         <input type="text" id="fname" name="fname" placeholder="exp. john devid">
-        <input type="email" id="lname" name="lname" placeholder="example@email.com">
+        <input type="email" id="lname" name="email" placeholder="example@email.com">
         <input type="submit" value="Send">
       </form>
+      <script>
+        function validateForm() {
+          var f_name = document.forms['myform']['fname'].value;
+          var e_mail = document.forms['myform']['email'].value;
+          if (f_name == "") {
+            alert("Enter your first name");
+            return false;
+          }
+          else if (e_mail == "") {
+            alert("Enter your email");
+            return false;
+          }
+        }
+      </script>
     </div>
   </section>
   <footer>

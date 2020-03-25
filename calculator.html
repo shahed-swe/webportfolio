@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+    <script>
+        function calculation(){
+            event.preventDefault();
+            var a = document.forms['calculator']['f_take'].value;
+            var b = document.forms['calculator']['l_take'].value;
+            var c = document.forms['calculator']['submit'].value;
+            var first = parseInt(a);
+            var second = parseInt(b);
+            var sum = first + second;
+            document.getElementById("hello").append(sum);
+        }
+    </script>
+    <style>
+        .take{
+            color: black;
+            background-color:white;
+            margin-top: 10px;
+            height: 20px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A simple Calculator For You Brothers</h1>
+    <form name="calculator" action="calculator.html" onsubmit="return calculation()" method="POST">
+        <input class="take" type="text" name = "f_take" required><br>
+        <input class="take" type="text" name = "l_take" required><br>
+        <input class="take" type="submit" value="Calculate">
+    </form>
+    <div class="result">
+        <h1 id="hello"></h1>
+    </div>
+</body>
+</html>

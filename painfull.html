@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+    <title>Document</title>
+    <script>
+        function calculation() {
+                event.preventDefault();
+                var a = document.forms['myform']['input1'].value;
+                var b = document.forms['myform']['input2'].value;
+                var first = parseInt(a);
+                var second = parseInt(b);
+                var sum = first + second;
+                alert(sum);
+                console.log(sum);
+                document.getElementById("hello").append(sum);
+            }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8 m-auto">
+                <form action="" name="myform" onsubmit="return calculation()" method="POST">
+                    <div class="form-row">
+                      <div class="from-group col-6 mb-4">
+                          <label for="">First Input</label>
+                          <input type="text" class="form-control" id="input1" name="input1" placeholder="Enter First Number:">
+                      </div>
+                      <div class="from-group col-6 md-4">
+                          <label for="">Second Input</label>
+                          <input type="text" class="form-control" id="input2" name="input2" placeholder="Enter Second Number:">
+                      </div>
+                    </div>
+                    <input class="btn btn-info shadow-none btn-block" type="submit">
+                </form>
+                <div class="card m-auto">
+                    <h1 id="hello"></h1>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
